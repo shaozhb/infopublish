@@ -1,0 +1,14 @@
+<hibernate-mapping xmlns="http://www.hibernate.org/xsd/hibernate-mapping">
+    <class name="cn.shao.infopublish.bean.User" table="tb_user" catalog="infopublish">
+        <id name="id" type="java.lang.String">
+            <column name="ID"/>
+            <generator class="uuid"/>
+        </id>
+        <property name="name" unique="true">
+            <column name="username"/>
+        </property>
+        <property name="password">
+            <column name="password"/>
+        </property>
+    </class>
+</hibernate-mapping>
