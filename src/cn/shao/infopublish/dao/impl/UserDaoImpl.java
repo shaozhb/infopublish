@@ -19,10 +19,11 @@ public class UserDaoImpl extends HibernateDaoSupport implements UserDao {
 
 
     public User getUserByUsername(String username) {
-        List userlist=this.getHibernateTemplate().find("from User user where user.username=?",username);
-        if(userlist.size()>0){
-            User user= (User) userlist.get(0);
+        List userlist = this.getHibernateTemplate().find("from User user where user.username=?", username);
+        if (userlist.size() > 0) {
+            User user = (User) userlist.get(0);
             return user;
+        }
     }
 
 
@@ -32,6 +33,7 @@ public class UserDaoImpl extends HibernateDaoSupport implements UserDao {
             User user= (User) userlist.get(0);
             return user;
         }
+        return null;
     }
 
 

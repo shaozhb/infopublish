@@ -1,0 +1,9 @@
+<package  name="user" extends="struts-default">
+    <action name="userAction_*" class="cn.shao.infopublish.struts2.action.UserAction" method="{1}">
+        <result name="success">/desktop.jsp</result>
+        <result name="user_mgr">/usermgr.jsp</result>
+        <result name="refresh" type="redirectAction">userAction_getAllUser.action</result>
+        <result name="error">/error.jsp</result>
+        <result name="failed">/failed.jsp</result>
+    </action>
+</package>
